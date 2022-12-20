@@ -1,5 +1,5 @@
 
-var sb = htmlstuffs.ocdsbblock.newSiteBlock();
+var sb = csapuntz.siteblock.newSiteBlock();
 
 if ("state" in localStorage) {
     sb.setState(JSON.parse(localStorage['state']));
@@ -58,7 +58,7 @@ function onOptionsChanged(opts) {
     sb.setAllowedUsage(opts.allowed, opts.period);
 }
 
-onOptionsChanged(htmlstuffs.ocdsbblock.read_options());
+onOptionsChanged(csapuntz.siteblock.read_options());
 
 chrome.windows.getAll( { populate: true }, onWindows );
 
