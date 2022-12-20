@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>OCDSB Blocker Options</title>
+
+        <script type="text/javascript" src="../js/siteblock.js"></script>
+        <script type="text/javascript" src="../js/options.js"></script>
+
+    </head>
+
+    <body>
+	<div id="status"></div>
+	<form>
+	Sites to Block:<br />
+	<textarea spellcheck="false" id="rules" cols="60" rows="15"></textarea>
+        <br />
+        Unblock for <input type="text" id="allowed" cols="6" /> minutes every <input type="text" id="period" cols="6" /> hours.
+        <br />
+	<input id="submit" type="button" value="Save Options" />
+        </form>
+
+<h2>Help</h2>
+
+<p>List the websites you want to block, one per line. For example:</p>
+<pre>
+cnn.com
+nytimes.com
+google.com/news
+</pre>
+
+<p>If you would like to block all sites except for a select few, enter a '*'
+on the first line and the websites you wish to allow with a '+' before each line. For example:</p>
+<pre>
+*
++stackoverflow.com
++msdn.microsoft.com
+</pre>
+
+</body>
+</html>
