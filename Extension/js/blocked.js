@@ -1,3 +1,6 @@
+// Copyright 2012 Constantine Sapuntzakis
+//
+
 function onload() {
     var ws = window.location.search;
 
@@ -6,8 +9,9 @@ function onload() {
       for (var i = 0; i < kvs.length; i++) {
          var kv = kvs[i].split('=');
          if (kv[0] == 'url') {
+             let url = window.location.href
+             document.getElementById("p1").innerHTML = url;
             
-            var u = document.getElementById("url");
                        
             var url = decodeURIComponent(kv[1]);
             u.href = url;
@@ -18,3 +22,4 @@ function onload() {
 }
 
 document.addEventListener('DOMContentLoaded', onload);
+
